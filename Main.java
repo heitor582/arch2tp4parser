@@ -11,7 +11,7 @@ public class Main{
     private static char B;
     private static char C;
     private static WeakHashMap<String, Character> map = new WeakHashMap<>();
-    private static int FILE_SIZE = 96;
+    private static int HEX_FILE_SIZE = 96;
     private static void startWHM() {
         map.put("umL",   '0');
         map.put("zeroL", '1');
@@ -71,9 +71,9 @@ public class Main{
     	    text=sc.nextLine();
     	}
     	
-    	if(commands.size() > FILE_SIZE){
+    	if(commands.size() > HEX_FILE_SIZE){
     	    sc.close();
-            throw new Exception(String.format("Cannot be more than %d position", FILE_SIZE));
+            throw new Exception(String.format("Cannot be more than %d positions", HEX_FILE_SIZE));
     	}
     	writeOnFile(commands);
         sc.close();
